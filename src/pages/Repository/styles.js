@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const Loading = styled.div`
   color: #fff;
@@ -8,6 +18,14 @@ export const Loading = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+
+  ${props =>
+    props.loading &&
+    css`
+      svg {
+        animation: ${rotate} 1s linear infinite;
+      }
+    `}
 `;
 
 export const Owner = styled.header`
@@ -98,6 +116,47 @@ export const IssuesList = styled.ul`
         font-size: 12px;
         color: #999;
       }
+    }
+  }
+`;
+
+export const IssueFilter = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  button {
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    margin: 0 0.25rem;
+    &:nth-child(${props => props.active + 1}) {
+      background: #576574;
+      color: white;
+    }
+  }
+`;
+
+export const IssuePaginate = styled.div`
+  display: flex;
+  justify-content: center;
+
+  button {
+    transition: opacity 0.25s ease-out;
+    border-radius: 4px;
+    border: 0;
+    opacity: 1;
+    padding: 8px;
+    background: #576574;
+    color: #fff;
+
+    & + button {
+      margin-left: 20px;
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
     }
   }
 `;

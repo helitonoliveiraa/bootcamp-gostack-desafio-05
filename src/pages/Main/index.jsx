@@ -4,7 +4,8 @@ import { FaGithub, FaPlus, FaSpinner } from 'react-icons/fa';
 
 import api from '../../services/api';
 
-import { Container, SubmitButton, Form, List } from './styled';
+import Container from '../../components/Container';
+import { SubmitButton, Form, List } from './styles';
 
 class Main extends Component {
   constructor(props) {

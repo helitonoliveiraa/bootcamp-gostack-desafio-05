@@ -1,4 +1,4 @@
-<h1 align="center">Desafio modulo 05</h1>
+<h1 align="center">Desafio 05: Primeiro projeto com ReactJS</h1>
 
 <p align="center">
   <img src=".github/image01.png" width="400" />

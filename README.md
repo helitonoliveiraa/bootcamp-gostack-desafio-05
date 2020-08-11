@@ -8,7 +8,7 @@
 
 ## Sobre
 
-Essa aplicaçã faz partes dos desafios do bootcamp da Rocketseat.
+Essa aplicação faz partes dos desafios do bootcamp da Rocketseat.
 
 É uma aplicação simples, onde se pode buscar por repositórios no Github inserindo `nome-dono-repositório/nome-repositório`.
 

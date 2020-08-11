@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Loading = styled.h1`
   font-size: 32px;
@@ -41,6 +41,25 @@ export const Owner = styled.header`
     line-height: 1.4;
     text-align: center;
     max-width: 400px;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+
+  button {
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    margin: 0 0.25rem;
+
+    &:nth-child(${props => props.active + 1}) {
+      background: #576574;
+      color: white;
+    }
   }
 `;
 
@@ -97,6 +116,36 @@ export const IssueList = styled.ul`
         font-size: 12px;
         color: #999;
       }
+    }
+  }
+`;
+
+export const ButtonPaginate = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    padding: 8px;
+    margin: 0 0.25rem;
+    background: #576574;
+    color: #fff;
+
+    &:first-child {
+      ${props =>
+        props.page < 2 &&
+        css`
+          opacity: 0.5;
+        `}
     }
   }
 `;

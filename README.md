@@ -7,10 +7,10 @@
 
 <br /><br />
 
-<a href="https://romantic-jackson-b1380a.netlify.app/">
-<button>
+<a href="https://romantic-jackson-b1380a.netlify.app/" target="_blank">
+
 Acessar o projeto
-</button>
+
 </a>
 
 <br /><br />
